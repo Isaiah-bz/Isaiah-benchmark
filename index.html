@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentals of Computing - Course</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Times New Roman", sans-serif;
+      color: #fff;
+      /* Background for all pages */
+      background: linear-gradient(to bottom right, #0a192f, #1e2a38);
+      background-image: url('star.jpg'); /* Assuming 'star.jpg' is your space background image */
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(30, 42, 56, 0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+    }
+
+    .navbar .logo {
+      color: #00b4d8;
+      font-size: 1.6em;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1em;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .navbar ul li a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #00b4d8;
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+      color: #00b4d8;
+    }
+
+    .navbar ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* Page content */
+    .page-content {
+      margin-top: 140px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      width: 90%;
+      max-width: 900px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .top-image {
+      max-width: 500px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .top-image:hover {
+      transform: scale(1.03);
+    }
+
+    /* Transparent text box */
+    .transparent-box {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      padding: 50px 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+      text-align: left;
+      animation: slideUp 1.5s ease;
+    }
+
+    .transparent-box h1 {
+      font-size: 2.2rem;
+      color: #00b4d8;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .transparent-box p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.9rem;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(5px);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 30px;
+      }
+
+      .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+      }
+
+      .transparent-box {
+        padding: 30px 20px;
+      }
+
+      .transparent-box h1 {
+        font-size: 1.8rem;
+      }
+
+      .transparent-box p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+
+  <nav class="navbar">
+    <a class="logo" >Fundamentals of Computing</a>
+    <ul>
+      <li><a href="index.html">Course</a></li>
+      <li><a href="project.html">Project</a></li>
+      <li><a href="concepts.html">Concepts</a></li>
+      <li><a href="database.html">Databases</a></li>
+      <li><a href="documentation.html">Documentation</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-content">
+    <img src="FOC.png" alt="Fundamentals of Computing Banner" class="top-image">
+
+    <div class="transparent-box">
+      <h1>What is this course?</h1>
+      <p>
+        This course is an introduction to the fundamentals of Computer Science that provides a foundation for future studies. 
+        It explores the capabilities of computer systems in terms of architecture, operating systems, networks, 
+        software development, data organization, and the potential of computing machines.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    @ Powered by UB
+  </footer>
+
+</body>
+</html>

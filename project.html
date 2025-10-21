@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Fundamentals of Computing - Project</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    /* Note: Ideally, this style block would be an external style.css file shared by all pages. */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Times New Roman", sans-serif;
+      color: #fff;
+      background: linear-gradient(to bottom right, #0a192f, #1e2a38);
+      background-image: url('star.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* --- Navigation Bar (New) --- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(30, 42, 56, 0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+    }
+
+    .navbar .logo {
+      color: #00b4d8;
+      font-size: 1.6em;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1em;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .navbar ul li a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #00b4d8;
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+      color: #00b4d8;
+    }
+
+    .navbar ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* --- Page Content Container --- */
+    article {
+      margin-top: 140px; /* To clear fixed navbar */
+      padding: 50px 40px;
+      width: 90%;
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+      text-align: left;
+      margin-bottom: 60px; /* Space for footer */
+    }
+    
+    article h1 {
+      font-size: 2.2rem;
+      color: #00b4d8;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    article p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      opacity: 0.95;
+      margin-bottom: 15px;
+    }
+    
+    article ul {
+      list-style: disc;
+      padding-left: 40px;
+    }
+    
+    article ul li {
+      margin: 10px 0;
+    }
+    
+    article ul li a {
+      color: #00b4d8; /* Make project links stand out */
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: auto; /* Push footer to bottom */
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.9rem;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(5px);
+    }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a class="logo" >Fundamentals of Computing</a>
+    <ul>
+      <li><a href="index.html">Course</a></li>
+      <li><a href="project.html">Project</a></li>
+      <li><a href="concepts.html">Concepts</a></li>
+      <li><a href="database.html">Databases</a></li>
+      <li><a href="documentation.html">Documentation</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+    </ul>
+</nav>
+  
+  <article>
+    <h1>Project</h1>
+    <p>The final project will consist of 4 sections. Each section has a deadline to complete. A complete description of the project can be found on the course moodle site. It will consist of launching a website built with, html, css, and javascript and hosted on github. This site is a benchmark for the Final Project. See
+**Project Specification on Moodle Site**.</p>
+
+<ul>
+  <li><a href="notgate.html" style="color:#00b4d8">Project 1: NOT Gate</a></li>
+  <li><a href="andgate.html" style="color:#00b4d8">Project 2: AND Gate</a></li>
+  <li><a href="easyand.html" style="color:#00b4d8">Project 2: AND Gate - easy version</a></li>
+  <li><a href="binarytohex.html" style="color:#00b4d8">Project 3: Binary to Hexidecimal Converter</a></li>
+  <li><a href="ascii.html" style="color:#00b4d8">Project 4: ASCII Converter</a></li>
+  <li><a href="unicode.html" style="color:#00b4d8">Project 4: UNICODE Converter</a></li>
+  <li><a href="MLinstructions.html" style="color:#00b4d8">Project 5: Machine Language Instructions Converter</a></li>
+</ul>  
+
+
+  </article>  
+
+<footer>
+  <p>@ Powered by UB</p>
+</footer>
+
+</body>
+</html>
